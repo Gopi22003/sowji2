@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat UI</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7eeee;
+}
+
+
+.chat-container {
+  max-width: 380px;
+  width: 100%;
+  margin: 20px auto;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  background: #0b141a;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+
+.chat-header {
+  background: #202c33;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  position: relative;
+
+  
+  background-image: url('./sowji.jpeg');
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: scroll; 
+}
+
+.chat-body::before {
+  content: "";
+  position: absolute;
+
+ 
+  z-index: 0;
+}
+
+
+.chat-body * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.date {
+  position: sticky;
+  top: 10px;
+  text-align: center;
+  margin: 10px auto;
+  background: #1f2c33;
+  color: #ccc;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+
+.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.sent {
+  background: #005c4b;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+
+.received {
+  background: #202c33;
+  color: #fff;
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+}
+
+
+.time {
+  font-size: 10px;
+  color: #cfe2da;
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background: #202c33;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.chat-footer input:focus {
+  outline: none;
+}
+
+.chat-footer button {
+  margin-left: 10px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  background: #00a884;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="chat-container">
+
+  <div class="chat-header">
+    <div>Sowji🦜🍻</div>
+    <div class="header-right">
+      <span class="icon">📹</span>
+      <span class="icon">📞</span>
+      <span class="icon">⋮</span>
+    </div>
+  </div>
+
+  <div class="chat-body">
+
+    <div class="date">3 May 2026</div>
+
+    <div class="message sent">
+      Hlo gorgeous 😂😊
+      <span class="time">1:25 PM</span>
+    </div>
+
+    <div class="message received">
+      Ikada kuda same msg ravali 😂
+      <span class="time">1:39 PM</span>
+    </div>
+
+    <div class="message sent">
+      Koncham different try chesa 😂
+      <span class="time">1:40 PM</span>
+    </div>
+
+    <div class="message sent">
+      22nd nuv kuda vastvu ga
+      <span class="time">1:40 PM</span>
+    </div>
+
+    <div class="date">4 May 2026</div>
+
+    <div class="message received">
+      Two numbers ahh
+      <span class="time">1:40 PM</span>
+    </div>
+
+    <div class="message sent">
+      Ha 😎
+      <span class="time">1:40 PM</span>
+    </div>
+
+    <div class="message received">
+      Yes
+      <span class="time">1:40 PM</span>
+    </div>
+
+    <div class="message sent">
+      Sare apdu meet avvudham 😉
+      <span class="time">1:41 PM</span>
+    </div>
+
+    <div class="message received">
+      Okayyy
+      <span class="time">5:13 PM</span>
+    </div>
+
+    <div class="message sent">
+      But one thing…
+      <span class="time">5:14 PM</span>
+    </div>
+
+    <div class="message received">
+      Enti 😏
+      <span class="time">5:14 PM</span>
+    </div>
+
+    <div class="message sent">
+      Nuv chat lo kante real lo inkoncham dangerous untav anipistundi 😄
+      <span class="time">5:15 PM</span>
+    </div>
+
+    <div class="message received">
+      Ayyoo ala anipinchinda 😂
+      <span class="time">5:15 PM</span>
+    </div>
+
+    <div class="message sent">
+      Anipinchindi kaadu… confirm 😌
+      <span class="time">5:16 PM</span>
+    </div>
+
+    <div class="date">5 May 2026</div>
+
+    <div class="message received">
+      Mari careful ga undu 😜
+      <span class="time">5:16 PM</span>
+    </div>
+
+    <div class="message sent">
+      Nuv unna place lo careful undadam kastam 😅
+      <span class="time">5:17 PM</span>
+    </div>
+
+    <div class="message received">
+      Smooth ga matladutunnav kada 😏
+      <span class="time">5:17 PM</span>
+    </div>
+
+    <div class="message sent">
+      Nuv inspire chesthunav 😌
+      <span class="time">5:18 PM</span>
+    </div>
+
+    <div class="message received">
+      Sare chalu… inka ekkuva matladithe alavatu aipothundi 😂
+      <span class="time">5:18 PM</span>
+    </div>
+
+    <div class="message sent">
+      Adhe plan 😏
+      <span class="time">5:19 PM</span>
+    </div>
+
+  </div>
+
+  <div class="chat-footer">
+    <input type="text" placeholder="Little Star Gopi...">
+    <button>➤</button>
+  </div>
+
+</div>
+
+</body>
+</html>
